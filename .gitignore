@@ -25,6 +25,14 @@ htmlcov/
 !.env.example
 .vscode/*.log
 
+# Local video data and generated processing results
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+
 # Operating-system files
 .DS_Store
 Thumbs.db

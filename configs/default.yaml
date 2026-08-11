@@ -1,0 +1,15 @@
+# Initial settings for the "watch and listen" preprocessing stage.
+# These are safe defaults; adjust them when we select concrete models.
+project:
+  data_dir: data
+
+preprocess:
+  extract_audio: true
+  sample_frames: true
+  frame_interval_seconds: 5
+  language: zh
+
+output:
+  save_transcript: true
+  save_ocr: true
+  save_metadata: true
