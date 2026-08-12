@@ -39,3 +39,19 @@
 - `source`：文字来源，当前为 `asr`（听）或 `ocr`（看）。
 
 后续“编目录”阶段只读取这些结构化文件，不直接依赖原始视频。
+
+## 本阶段的命令
+
+将视频放入 `data/raw/` 后运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m videolearn_demo.preprocess data/raw/lecture_001.mp4
+```
+
+执行后会产生：
+
+- `data/interim/<video_id>/audio.wav`：16 kHz 单声道音频，供 Whisper 使用。
+- `artifacts/<video_id>/transcript.jsonl`：带时间戳的语音字幕。
+- `artifacts/<video_id>/frames/`：按配置时间间隔抽取的 JPEG 关键帧。
+- `artifacts/<video_id>/frames.jsonl`：每张关键帧的时间戳及相对路径。
+- `artifacts/<video_id>/metadata.json`：视频和本次处理的基本信息。

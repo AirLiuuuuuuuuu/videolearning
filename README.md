@@ -10,6 +10,14 @@ python -m venv .venv
 python -m pip install --upgrade pip
 ```
 
+For a CPU-only Windows machine, install the official PyTorch CPU build before
+installing the project dependencies:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-torch-cpu.txt
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+```
+
 Run the starter program:
 
 ```powershell

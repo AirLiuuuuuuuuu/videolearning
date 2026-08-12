@@ -8,6 +8,11 @@ preprocess:
   sample_frames: true
   frame_interval_seconds: 5
   language: zh
+  audio_sample_rate: 16000
+  whisper_model: base
+
+# `base` is a reasonable first local model. Increase to `small` later for
+# better accuracy at the cost of slower processing and a larger download.
 
 output:
   save_transcript: true
